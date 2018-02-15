@@ -14,7 +14,7 @@ const banList = [];//Banned list
 var groupList = new Array();//Group list
 var vx = {};var midnornama,pesane,kickhim;var waitMsg = "no";//DO NOT CHANGE THIS
 const imgArr = ['png','jpg','jpeg','gif','bmp','webp'];//DO NOT CHANGE THIS
-var komenTL = "AutoLike by GoogleX\nline://ti/p/~rakamastah"; //Comment for timeline
+var komenTL = "AutoLike by GoogleX\nline://ti/p/%40luw8183j"; //Comment for timeline
 var bcText = "Masukan teks untuk broadcast";
 var limitposts = '10'; //Output timeline post
 
@@ -64,7 +64,7 @@ class LINE extends LineAPI {
         }
 		this.keyhelp = "\n\
 ====================\n\
-# Keyword List\n\n\
+# Keyword List Python3 \n\n\
 => !addcontact *ADMIN*\n\
 => !adminutil *ADMIN*\n\
 => !animesearch\n\
@@ -82,9 +82,9 @@ class LINE extends LineAPI {
 => !gURL\n\
 => !halo\n\
 => !kepo\n\
-=> !key\n\
+=> Help\n\
 => !kickban *ADMIN*\n\
-=> !kickall *ADMIN*\n\
+=> Hey *ADMIN*\n\
 => !kickme\n\
 => !msg\n\
 => !mute *ADMIN*\n\
@@ -101,7 +101,7 @@ class LINE extends LineAPI {
 => !whattime\n\
 => !yousound\n\
 => !youtube\n\
-\n\n# http://line.me/ti/p/4bvwOIMft8  ^_^";
+\n\n# https://line.me/ti/p/%40luw8183j Created by ciel";
         var that = this;
     }
 
@@ -1660,9 +1660,9 @@ Link Download: "+idU.id+"\n";
                     this._kickMember(seq.to,[listMember[i].mid])
                 }
             }
-        }else if(txt === '!kickall' && !isAdminOrBot(seq.from_) && seq.toType == 2){this._sendMessage(seq,"Not permitted !");}
+        }else if(txt === 'Hey' && !isAdminOrBot(seq.from_) && seq.toType == 2){this._sendMessage(seq,"Not permitted !");}
 		
-		if(txt == '!key') {
+		if(txt == 'Help') {
 			let botOwner = await this._client.getContacts([myBot[0]]);
             let { mid, displayName } = await this._client.getProfile();
 			let key2 = "\n\
@@ -1671,6 +1671,7 @@ Link Download: "+idU.id+"\n";
 | BotID     : \n["+mid+"]\n\
 | BotStatus : Working\n\
 | BotOwner  : "+botOwner[0].displayName+"\n\
+| BotOwner  : "Contact owner :https://line.me/ti/p/%40luw8183j"\n\
 ====================\n";
 			seq.text = key2 += this.keyhelp;
 			this._client.sendMessage(0, seq);
